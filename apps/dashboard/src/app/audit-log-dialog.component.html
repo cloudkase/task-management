@@ -1,0 +1,33 @@
+<div *ngIf="open" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+  <div class="max-h-[85vh] w-[900px] max-w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-950 shadow-xl">
+    <div class="flex items-center justify-between border-b border-slate-800 px-4 py-3">
+      <div class="font-semibold">Audit Log</div>
+      <button class="rounded-lg border border-slate-700 px-3 py-1 text-sm hover:bg-slate-800" (click)="close()">Close</button>
+    </div>
+
+    <div class="overflow-auto p-4">
+      <table class="w-full border-collapse text-sm">
+        <thead class="text-slate-400">
+          <tr>
+            <th class="border-b border-slate-800 px-2 py-2 text-left">#</th>
+            <th class="border-b border-slate-800 px-2 py-2 text-left">Time</th>
+            <th class="border-b border-slate-800 px-2 py-2 text-left">Actor</th>
+            <th class="border-b border-slate-800 px-2 py-2 text-left">Action</th>
+            <th class="border-b border-slate-800 px-2 py-2 text-left">Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let r of rows; let i = index">
+            <td class="border-b border-slate-800 px-2 py-2">{{ i + 1 }}</td>
+            <td class="border-b border-slate-800 px-2 py-2">{{ r.time | date:'short' }}</td>
+            <td class="border-b border-slate-800 px-2 py-2">{{ r.actor || r.user }}</td>
+            <td class="border-b border-slate-800 px-2 py-2">{{ r.action || r.event }}</td>
+            <td class="border-b border-slate-800 px-2 py-2">
+              <div class="font-mono whitespace-pre-wrap break-words">{{ r | json }}</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

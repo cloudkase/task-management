@@ -1,0 +1,20 @@
+{
+  "name": "dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "ts-node --project tsconfig.json dev-server.ts",
+    "serve": "ts-node --project tsconfig.json dev-server.ts",
+    "test": "jest -c jest.config.js"
+  },
+  "dependencies": {
+    "@angular/cdk": "^18.2.14",
+    "@angular/router": "^18.2.14",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}

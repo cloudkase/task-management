@@ -1,0 +1,9 @@
+packages:
+  - apps/*
+  - libs/*
+
+ignoredBuiltDependencies:
+  - '@nestjs/core'
+  - better-sqlite3
+  - nx
+  - sqlite3

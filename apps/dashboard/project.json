@@ -1,0 +1,33 @@
+{
+  "name": "dashboard",
+  "projectType": "application",
+  "sourceRoot": "apps/dashboard/src",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/dashboard",
+        "index": "apps/dashboard/src/index.html",
+        "main": "apps/dashboard/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/dashboard/tsconfig.app.json",
+        "assets": [
+          "apps/dashboard/src/favicon.ico",
+          "apps/dashboard/src/assets"
+        ],
+        "styles": ["apps/dashboard/src/styles.css"],
+        "scripts": []
+      }
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "browserTarget": "dashboard:build",
+        "port": 4200,
+        "host": "localhost",
+        "proxyConfig": "apps/dashboard/proxy.conf.json"
+      }
+    }
+  },
+  "tags": []
+}

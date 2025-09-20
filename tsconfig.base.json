@@ -1,0 +1,20 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@data": ["libs/data/src/index.ts"],
+      "@data/*": ["libs/data/src/lib/*"],
+      "@auth": ["libs/auth/src/index.ts"],
+      "@auth/*": ["libs/auth/src/lib/*"]
+    },
+    "moduleResolution": "node",
+    "target": "ES2022",
+    "module": "CommonJS",
+    "lib": ["ES2022", "dom"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "importHelpers": true,
+    "skipLibCheck": true
+  }
+}

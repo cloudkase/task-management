@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2022",
+    "moduleResolution": "bundler",
+    "types": ["jest", "node", "jest-preset-angular"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.spec.ts", "src/**/*.d.ts", "src/setup-jest.ts"]
+}
